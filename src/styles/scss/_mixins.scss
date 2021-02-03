@@ -1,0 +1,137 @@
+@mixin zero-padding-margin {
+  padding: $zero-number;
+  margin: $zero-number;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-center {
+  @include flex-row;
+  justify-content: $center;
+}
+
+@mixin flex-row-center-center {
+  @include flex-row-center;
+  align-items: $center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  justify-content: $center;
+}
+
+@mixin flex-column-center-center {
+  @include flex-column-center;
+  align-items: $center;
+}
+
+@mixin steps-number {
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  color: map-get($color, 'white');
+}
+
+@mixin list-responsive {
+  width: 100%;
+  margin: $zero-number auto;
+}
+
+@mixin zero-left-right {
+  position: absolute;
+  left: $zero-number;
+  right: $zero-number;
+}
+
+@mixin form {
+  width: 60%;
+  margin: $zero-number auto;
+}
+
+@mixin fieldset {
+  text-align: right;
+  margin: $zero-number auto;
+  border: 2px solid map-get($color, 'gray-light');
+  border-radius: 5px;
+
+  &:focus-within {
+    border: 2px solid map-get($color, 'blue');
+
+    .legend {
+      background-color: map-get($color, 'blue');
+    }
+
+    .box {
+      button {
+        background-color: map-get($color, 'blue');    
+      }
+    }
+  }
+}
+
+@mixin legend {
+  padding: 10px;
+  background-color: map-get($color, 'gray');
+  color: map-get($color, 'white');
+  border-radius: 5px
+}
+
+@mixin label {
+  margin: 5px;
+}
+
+@mixin input-textarea {
+  font-family: 'Vazir-Black';
+  border: 2px solid map-get($color, 'gray-light');
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border: 2px solid map-get($color, 'blue')!important;
+  }
+}
+
+@mixin small {
+  color: map-get($color, 'red');
+  margin: $zero-number 5px;
+}
+
+@mixin button {
+  font-family: 'Vazir-Black';
+  background-color: map-get($color, 'gray');
+  color: map-get($color, 'white');
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px auto;
+  width: 100%;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin form-mobile {
+  width: 100%;
+  padding: 10px $zero-number;
+  margin: $zero-number;
+}
+
+@mixin fieldset-mobile {
+  width: 85%;
+  margin: $zero-number auto;
+  font-size: 14px;
+}
